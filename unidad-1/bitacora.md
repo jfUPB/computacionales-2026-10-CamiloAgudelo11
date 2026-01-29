@@ -4,32 +4,47 @@
 ## Escribe el programa.
 
 @12
+
 M=0
 
 @13
+
 M=1
 
 (LOOP)
+
 @13
+
 D=M
+
 @5
+
 D=D-A
+
 @END
+
 D;JGT
 
 @13
+
 D=M
+
 @12
+
 M=D+M
 
 @13
+
 M=M+1
 
 @LOOP
+
 0;JMP
 
 (END)
+
 @END
+
 0;JMP
 
 
@@ -44,4 +59,5 @@ M=M+1
 
 
 <img width="413" height="678" alt="Captura de pantalla 2026-01-29 173724" src="https://github.com/user-attachments/assets/3c82d3f5-f05e-48b4-ace0-47a4da73be81" />
+
 
