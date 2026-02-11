@@ -1,9 +1,14 @@
 # Unidad 2
 
-## Bitácora de proceso de aprendizaje
+## Actividad 08
 
 
-## Bitácora de aplicación 
+### Implementa ambos programas en lenguaje ensamblador.
 
 
-## Bitácora de reflexión
+
+### Capturas de pantalla donde muestres una parte de la simulación y expliques qué se ve esa captura.
+
+
+
+### Captura de pantalla del simulador mostrando el resultado final correcto.
