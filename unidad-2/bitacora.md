@@ -324,14 +324,327 @@ A=M
 ### Muestra el diseño que hiciste en Bitmap Editor.
 
 
+<img width="1919" height="852" alt="image" src="https://github.com/user-attachments/assets/4310b90b-aace-45bb-b29c-1d1f19dbcebb" />
+
+
+
 ### Incluye el código en ensamblador generado por Bitmap Editor.
+
+
+(draw)
+
+ // put bitmap location value in R12
+	
+ // put code return address in R13
+	
+ @SCREEN
+	
+ D=A
+	
+ @R12
+	
+ AD=D+M
+	
+ // row 1
+	
+ @36 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // row 2
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @36 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // row 3
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @36 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // row 4
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @129 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // row 5
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @255 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // return
+	
+ @R13
+	
+ A=M
+	
+ D;JMP
+
 
 
 ### Incluye el programa completo en ensamblador que llama a la función generada por Bitmap Editor y que lee las teclas d y e para dibujar y borrar respectivamente el mapa de bits.
 
 
-### Construye tu programa PASO A PASO mediante pruebas utilizando el simulador.
+(INIT)
+
+  @0
+    
+  D=A
+    
+  @R12
+    
+  M=D      
+
+(LOOP)
+    
+ @KBD
+    
+ D=M
+
+    
+    
+ @LOOP
+    
+ D;JEQ
+
+    
+    
+  @100
+    
+ D=D-A
+    
+@DRAW_CALL
+    
+D;JEQ
+
+    
+    
+@KBD
+    
+D=M
+    
+ @101
+    
+ D=D-A
+    
+ @ERASE_CALL
+    
+ D;JEQ
+
+
+  
+@LOOP
+    
+0;JMP
+
+
+
+
+(DRAW_CALL)
+    
+ @RETURN1
+    
+ D=A
+    
+ @R13
+    
+ M=D
+    
+ @draw
+    
+ 0;JMP
+
+(RETURN1)
+    
+ @LOOP
+    
+ 0;JMP
+
+
+
+
+(ERASE_CALL)
+   
+ @RETURN2
+    
+  D=A
+    
+ @R13
+    
+ M=D
+    
+ @erase
+    
+ 0;JMP
+
+
+(RETURN2)
+    
+ @LOOP
+    
+ 0;JMP
+
+
+
+
+(draw)
+	
+ // put bitmap location value in R12
+	
+ // put code return address in R13
+	
+ @SCREEN
+	
+ D=A
+	
+ @R12
+	
+ AD=D+M
+	
+ // row 1
+	
+ @36 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // row 2
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @36 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // row 3
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @36 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ 
+ M=D-A // RAM[addr] = val
+	
+ // row 4
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @129 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ 
+ // row 5
+	
+ D=A // D holds previous addr
+	
+ @32
+	
+ AD=D+A
+	
+ @255 // A holds val
+	
+ D=D+A // D = addr + val
+	
+ A=D-A // A=addr + val - val = addr
+	
+ M=D-A // RAM[addr] = val
+	
+ // return
+	
+ @R13
+	
+ A=M
+	
+ D;JMP
+
+
+
+
+
 
 
 ### Incluye capturas de pantalla donde muestres el resultado final de la aplicación.
+
+
+
+<img width="1919" height="771" alt="Captura de pantalla 2026-02-12 183317" src="https://github.com/user-attachments/assets/9b5a9d3e-e75f-4ae4-a466-3cf7b3a50c23" />
+
+
+
+<img width="256" height="239" alt="Captura de pantalla 2026-02-12 183328" src="https://github.com/user-attachments/assets/dc10eedc-27e4-4710-8ee9-d836b1d6089c" />
 
