@@ -138,3 +138,91 @@ int estadisticas[3];
 
 
 ## Bitácora de reflexión
+
+
+### Parte 1: recuperación de conocimiento (Retrieval Practice)
+
+
+#### Explica con tus propias palabras qué es el stack y qué es el heap en C++.
+
+El stack es la memoria automatica y heap es la memoria dinamica.
+
+
+#### Describe las tres formas de pasar parámetros a una función en C++ (valor, referencia y puntero). Para cada una, explica qué sucede en memoria y cuándo usarías cada método.
+
+
+Por valor es para hacer una copia de la variable, por referencia se trabaja directamente en la principal y puntero se usa cuando trabajamos con la memoria 
+
+
+#### ¿Qué diferencia hay entre una variable local, una variable global y una variable local estática? ¿En qué segmento del mapa de memoria se almacena cada una?
+
+
+La variable local es la que esta dentro de la funcion, la global es la que esta en todo el programa y la estatica es la que esta dentro de la funcion pero no se destruye al salir de la misma.
+
+#### Explica qué es un objeto en C++ desde la perspectiva de memoria. ¿Dónde se almacenan los miembros de instancia y dónde los miembros estáticos?
+
+
+Un objeto es un bloque de memoria que guarda sus propiedades
+
+
+### Parte 2: transferencia y análisis de situación nueva
+
+
+#### Análisis de problemas: identifica al menos dos problemas serios en este código relacionados con el manejo de memoria. Explica por qué cada uno es problemático.
+
+
+1.En la parte del codigo armas = new int[3]; nunca se usa un delete lo que hace que se reserve en la memoria heap y nunca se libere lo que podria causar un crasheo o utilizar memoria innecesaria 
+
+
+2.El arreglo de armas puede ser mas simple no es necesario usar new ya que es un tamaño fijo
+
+
+#### Predicción de comportamiento: ¿Qué valor mostrará totalEnemigos después de ejecutar el programa? ¿Por qué ocurre esto?
+
+
+El valor sera 10 ya que en crearEscuadron se crean 5 y se llama 2 veces esta funcion
+
+#### Propuesta de solución: escribe una versión corregida de la clase Enemigo que solucione los problemas identificados. Explica brevemente cada cambio que hiciste.
+
+
+```
+
+class Enemigo {
+public:
+    static int totalEnemigos;
+    int vida;
+    int armas[3];  // ya no es puntero
+
+    Enemigo(int v) : vida(v) {
+        totalEnemigos++;
+        armas[0] = 10;
+        armas[1] = 15;
+        armas[2] = 20;
+    }
+};
+
+```
+
+Se elimino el puntero y el new  y ahora cada objeto tiene su arreglo
+
+
+
+### Parte 3: reflexión metacognitiva
+
+
+#### De todos los conceptos que exploraste en esta unidad (stack vs heap, paso de parámetros, ciclo de vida de objetos, etc.), ¿Cuál consideras que es el más crítico para evitar errores en programas reales? ¿Por qué?
+
+
+Diria que es saber la diferencia o saber cuando usar el stack o el heap ya que puede causar errores dificiles de resolver en la memoria o en el codigo 
+
+
+#### ¿Cómo cambió tu comprensión sobre lo que realmente es un “objeto” después de comparar C++ con C#? ¿Qué implicaciones prácticas tiene esta diferencia?
+
+
+Pues lo que principalmente cambio es que en C++ se puede usar el stack o el heap y en C# es mas automatico
+
+
+#### Si tuvieras que explicar a un compañero de semestres anteriores por qué es importante entender la gestión de memoria en programación, ¿Qué le dirías en máximo 3 oraciones?
+
+
+Sin saber como funciona la memoria puede ser que el programa falle y no entender por que y muchos de estos vienen de una mala gestion de memoria
