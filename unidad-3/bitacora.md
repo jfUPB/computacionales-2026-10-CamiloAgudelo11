@@ -191,7 +191,7 @@ class Enemigo {
 public:
     static int totalEnemigos;
     int vida;
-    int armas[3];  // ya no es puntero
+    int armas[3];  
 
     Enemigo(int v) : vida(v) {
         totalEnemigos++;
@@ -226,3 +226,4 @@ Pues lo que principalmente cambio es que en C++ se puede usar el stack o el heap
 
 
 Sin saber como funciona la memoria puede ser que el programa falle y no entender por que y muchos de estos vienen de una mala gestion de memoria
+
