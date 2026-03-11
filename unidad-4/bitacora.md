@@ -1,6 +1,5 @@
 # Unidad 4
 
-## Bitácora de proceso de aprendizaje
 
 
 ## Bitácora de aplicación 
@@ -190,4 +189,67 @@ void ofApp::keyPressed(int key) {
     }
 }
 
+
+
+Para esta actividad debes presentar en tu bitácora una serie de de evidencias que demuestren que analizaste y probaste tu código.
+
+Para cada una de las siguientes situaciones, debes incluir:
+
+Captura de pantalla del depurador (mostrando el código detenido en el breakpoint y las variables/memoria de interés).
+Explicación: ¿Qué variables y valores específicos se están observando en la imagen?
+Justificación: ¿Por qué esto demuestra que la estructura o la función cumple con lo solicitado en el enunciado?
+
+
+
+### Evidencia 1: inserción del primer nodo en una cola vacía (enqueue)
+
+
+
+
+<img width="1917" height="991" alt="image" src="https://github.com/user-attachments/assets/09b243cd-b1b5-4e71-9332-f6fb619a53ab" />
+
+
+
+
+
+### Evidencia 2: mantenimiento del orden FIFO al insertar más nodos (enqueue)
+
+
+<img width="1917" height="1015" alt="image" src="https://github.com/user-attachments/assets/3f9a4eb6-0d9d-48fe-b08d-288a3f8a66d0" />
+
+
+
+### Evidencia 3: comportamiento de eliminación y prevención de fugas (dequeue)
+
+
+<img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/ec23f6bc-a2c9-480a-9812-5e08eff223c6" />
+
+
+
+### Evidencia 4: control del tamaño máximo de la cola (maxSize)
+
+
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/f05a059e-a721-4ded-8262-7c3f57988ce5" />
+
+
+
+### Evidencia 5: recorrido de la cola sin destruirla (draw)
+
+
+
+<img width="1915" height="1011" alt="image" src="https://github.com/user-attachments/assets/db73090c-dcb9-4fed-a1a9-4e7c7fa9e8c9" />
+
+
+
+
+### Evidencia 6: limpieza total de la memoria (clear)
+
+
+
+<img width="1917" height="1010" alt="image" src="https://github.com/user-attachments/assets/aaac46ae-9ad4-4730-ab3f-093580c99197" />
+
+
+
 ## Bitácora de reflexión
+
