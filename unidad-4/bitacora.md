@@ -209,21 +209,61 @@ Justificación: ¿Por qué esto demuestra que la estructura o la función cumple
 <img width="1917" height="991" alt="image" src="https://github.com/user-attachments/assets/09b243cd-b1b5-4e71-9332-f6fb619a53ab" />
 
 
+### Explicacion
+
+
+En la imagen se observa el programa detenido en el enqueque y las variables que se ven front y rear tiene el valor nullptr y el size es 0 lo que indica esto es que la cola esta vacia antes de poner el primer nodo
+
+
+
+### Justificacion 
+
+
+Aqui se demuestra que la estructura de la cola se ve que comienza correctamente vacia y que el primer nodo sera el primero que se inserte en la cola 
 
 
 
 ### Evidencia 2: mantenimiento del orden FIFO al insertar más nodos (enqueue)
 
 
+
 <img width="1917" height="1015" alt="image" src="https://github.com/user-attachments/assets/3f9a4eb6-0d9d-48fe-b08d-288a3f8a66d0" />
+
+
+
+### Explicacion
+
+
+Se puede ver que el nuevo nodo se pone al final de la cola que utiliza el puntero rear apunta al ultimo que se creo y el front sigue apuntando al primer nodo 
+
+
+
+### Justificacion 
+
+
+
+Esto hace que se demuestre que la cola mantiene el FIFO, ya que los nuevos elementos se ponen al final y los primeros siguen al principio 
 
 
 
 ### Evidencia 3: comportamiento de eliminación y prevención de fugas (dequeue)
 
 
+
 <img width="1919" height="1012" alt="image" src="https://github.com/user-attachments/assets/ec23f6bc-a2c9-480a-9812-5e08eff223c6" />
 
+
+
+### Explicacion
+
+
+En la foto se ve el prgrama se detiene en la funcion dequeue mientras se elimina el nodo mas viejo de la cola queutiliza el delete y pasa cuando la cola supera el valor maximo
+
+
+### Justificacion 
+
+
+Aqui se demuestra que el programa elimina los nodos mas viejos lo que ayuda a liberar la memoria 
 
 
 ### Evidencia 4: control del tamaño máximo de la cola (maxSize)
@@ -231,6 +271,20 @@ Justificación: ¿Por qué esto demuestra que la estructura o la función cumple
 
 
 <img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/f05a059e-a721-4ded-8262-7c3f57988ce5" />
+
+
+
+### Explicacion
+
+
+En la imagen se ve que el tamaño de la cola supera lo maximo permitido lo que dice que la condicion size>MaxSize se da y se elimina el nodo mas antiguo 
+
+
+### Justificacion 
+
+
+Se demuestra que el programa puede controlar de una buena manera el tamaño maximo de la cola y evitar que sea infinita 
+
 
 
 
@@ -243,6 +297,20 @@ Justificación: ¿Por qué esto demuestra que la estructura o la función cumple
 
 
 
+
+### Explicacion
+
+
+El programa aqui recorre la cola utilizando current que comienza en front y que cada nodo se visite con current= current-next 
+
+
+### Justificacion 
+
+
+Esto justifica que todo los nodo se recorren de manera correcta para dibujar y esto se hace sin eliminar y sin modificar la estructura de la cola 
+
+
+
 ### Evidencia 6: limpieza total de la memoria (clear)
 
 
@@ -251,5 +319,19 @@ Justificación: ¿Por qué esto demuestra que la estructura o la función cumple
 
 
 
+
+### Explicacion
+
+
+Se ve que la funcion clear recorre todo los nodos y que utilizando dequeue los elimina hasta que la cola se quede sin nodos 
+
+
+### Justificacion 
+
+
+Esto demuestra que la memori autilizada por los nodos se libera y la cola queda vacia 
+
+
 ## Bitácora de reflexión
+
 
