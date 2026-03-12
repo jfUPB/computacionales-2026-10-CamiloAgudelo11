@@ -7,6 +7,7 @@
 
 ### Codigo completo 
 
+```
 
 
 #pragma once
@@ -115,7 +116,11 @@ public:
     void keyPressed(int key);
 };
 
+```
 
+
+
+```
 
 ofApp.cpp
 
@@ -189,7 +194,7 @@ void ofApp::keyPressed(int key) {
     }
 }
 
-
+```
 
 Para esta actividad debes presentar en tu bitácora una serie de de evidencias que demuestren que analizaste y probaste tu código.
 
@@ -212,7 +217,7 @@ Justificación: ¿Por qué esto demuestra que la estructura o la función cumple
 ### Explicacion
 
 
-En la imagen se observa el programa detenido en el enqueque y las variables que se ven front y rear tiene el valor nullptr y el size es 0 lo que indica esto es que la cola esta vacia antes de poner el primer nodo
+En la imagen se observa el programa detenido en el enqueue y las variables que se ven front y rear tiene el valor nullptr y el size es 0 lo que indica esto es que la cola esta vacia antes de poner el primer nodo
 
 
 
@@ -329,9 +334,10 @@ Se ve que la funcion clear recorre todo los nodos y que utilizando dequeue los e
 ### Justificacion 
 
 
-Esto demuestra que la memori autilizada por los nodos se libera y la cola queda vacia 
+Esto demuestra que la memoria autilizada por los nodos se libera y la cola queda vacia 
 
 
 ## Bitácora de reflexión
+
 
 
