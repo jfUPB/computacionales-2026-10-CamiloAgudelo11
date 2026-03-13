@@ -340,4 +340,65 @@ Esto demuestra que la memoria autilizada por los nodos se libera y la cola queda
 ## Bitácora de reflexión
 
 
+Vas a explicar con capturas de pantalla de GRÁFICOS hechos en la herramienta excalidraw el funcionamiento de la estructura de datos lista enlazada y la cola FIFO. Para cada una de las estructuras, debes ILUSTRAR con gráficos:
+
+Cómo se almacenan los datos en memoria (nodos, punteros, etc.).
+
+
+
+Cómo se realizan las operaciones clave (inserción, eliminación, recorrido).
+
+
+
+Cómo se relacionan estas estructuras con las aplicaciones creativas que construimos.
+
+
+## Lista enlazada 
+
+
+
+### lista enlazada almacenamiento de memoria
+
+
+<img width="1919" height="874" alt="image" src="https://github.com/user-attachments/assets/e4d3465b-4835-4b1e-917c-331734ee00be" />
+
+
+
+### Inserccion en lista enlazada 
+
+
+<img width="1913" height="865" alt="image" src="https://github.com/user-attachments/assets/25f732f7-fae1-4683-95d2-7f7669c9c0ae" />
+
+
+
+### Eliminacion en lista enlazada 
+
+
+<img width="1918" height="862" alt="image" src="https://github.com/user-attachments/assets/0b34a5fe-6f08-4cb5-ade0-3bc4f0416764" />
+
+
+## Cola FIFO
+
+
+
+### Estructura cola FIFO 
+
+
+<img width="1919" height="864" alt="image" src="https://github.com/user-attachments/assets/db4c6507-a84f-4570-a519-bdca78b6bc88" />
+
+
+
+### Inserccion en cola (dequeue)
+
+
+
+<img width="1919" height="885" alt="image" src="https://github.com/user-attachments/assets/0085b77b-0f17-4b4c-a0d5-49e9e5aa0bc9" />
+
+
+
+### Eliminacion en cola (dequeue)
+
+
+
+<img width="1913" height="864" alt="image" src="https://github.com/user-attachments/assets/05400848-a87b-4e42-83ce-e04818da3ac2" />
 
