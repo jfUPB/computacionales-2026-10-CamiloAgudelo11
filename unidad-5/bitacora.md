@@ -421,8 +421,24 @@ Se demuestra el polimorfismo por que el metodo update se llama mediante el punte
 ##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
 
 
+Esta dentro de update de la clase SpiralExplosion ya que aqui permite observar el estado delobjeto mientras esta activo 
 
 
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+
+Se observa el objeto SpiralExplosion con sus atributos internos position, velocity y color, ademas se oberva el _vptr 
+
+
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+Se evidencia el ciclo de vida por que se ve como se crea una particula, como evoluciona y como se elimina 
 
 #### Evidencia 6 — Sin fugas de memoria
 
