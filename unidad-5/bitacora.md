@@ -329,5 +329,41 @@ ofApp::~ofApp() {
 
 
 
+#### Evidencia 4 - Encapsulamiento en el contexto de herencia
+
+
+
+
+<img width="1918" height="1012" alt="Captura de pantalla 2026-03-25 002240" src="https://github.com/user-attachments/assets/5063f338-2f42-4691-8149-3dd8dfa2079e" />
+
+
+
+#### Evidencia 5 — Ciclo de vida completo de tu partícula
+
+
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/329379da-19a2-49f0-a183-44368eb74372" />
+
+
+#### Evidencia 6 — Sin fugas de memoria
+
+
+
+
+<img width="1919" height="1020" alt="Captura de pantalla 2026-03-25 004644" src="https://github.com/user-attachments/assets/1da195f0-2938-4ef9-90a8-25dd4781496a" />
+
+
+
+
+<img width="1919" height="1015" alt="Captura de pantalla 2026-03-25 004947" src="https://github.com/user-attachments/assets/4f8ac17c-3d46-4333-a5db-a168689e2dd4" />
+
+
+
+
+#### Evidencia 7 — Prueba de condición límite
+
+
+
+<img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/c6bb1096-4bb0-4bc3-9408-f2e59757f0d0" />
+
 
 ## Bitácora de reflexión
