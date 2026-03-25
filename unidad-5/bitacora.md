@@ -315,6 +315,33 @@ ofApp::~ofApp() {
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/488cd303-de54-4aee-be1a-12b268367613" />
 
 
+
+
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+
+
+Elegi el breakpoint en Update donde se recorren las particulas, por que en este momento las particulas fueron creadas y se almacenan en el vector lo que permite ver la memoria y ver como se representa la herencia. 
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+Se observa el vector particles, que alamacena punteros de tipo particles pero cada posicion del vector tiene objetos diferentes tipos como RisingParticle o ZigZagParticle que al inspeccionar cada uno se puede ver los atributos como position,velocity o color. 
+
+Ademas de puede ver el puntero _vptr el cual es el que apunta a la tabla de funciones virtuales.
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+Por que se ve que un objeto de tipo derivado ZigZagParticle tiene tanto la base particle como sus propios atributos, ademas el uso del puntero _vptr confirma que que el pbjeto tiene informacion sobre su tipo en tiempo de ejecucion y se observa polimorfismo al almacenar diferentes tipos en un solo puntero base, entonces se demuestra que la herencia se elabora un unico bloque en la memoria el cual se hace la clase base y la derivada de la misma 
+
+
+
 #### Evidencia 2 — La _vtable de tu nuevo tipo
 
 
@@ -322,10 +349,56 @@ ofApp::~ofApp() {
 <img width="1917" height="1018" alt="Captura de pantalla 2026-03-24 201625" src="https://github.com/user-attachments/assets/2848364c-368d-4857-aba5-02580555e7ff" />
 
 
+
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+Aqui puse el breakpoint en el update despues de crear particulas de tipo CircularExplosion al vector particles, y este es el punto en donde el punto ya fue ingresado a la memoria lo qeu se puede ver su estructura interna y la _vtable, y tambien se crearon otro tipo de particulas lo que permite comparar entre varias implementaciones de _vtable
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+Se observan el vector particle que tiene varios tipos como ZigZagParticle o CircularExplosion al expandir los objetos se ve su puntero _vtable y se observa dentro del puntero se ve los metodos vurtuales como update, shouldExplode,getPositional y getColor
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+Se demuestra el polimorfismo ,ediamte el _vtable aunque todos estan dentro de particles cada tipo de puntero mantiene su propia _vtable, y la diferencia entre cada una tenga su propio comportamiento y sean distintos 
+
+
+
 #### Evidencia 3 — Polimorfismo en tiempo de ejecución
 
 
+
 <img width="1919" height="1018" alt="image" src="https://github.com/user-attachments/assets/18adf0d0-a92a-4a89-960d-40782328b0f8" />
+
+
+
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+
+La coloque aqui dado que permite verificar si el programa ejecuta la implementacion especifica de la clase derivada en lugar de la clase base lo que se evidencia el despacho dinamico 
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+
+Esta dentro del meodo update en CircularExplosion y en las variables locales como position, velocity, age, lifetime y size con valores actualizados 
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+
+Se demuestra el polimorfismo por que el metodo update se llama mediante el puntero base particle pero se ejecuta la implementacion especifica de la clase derivada que es CircularExplosion, lo que confirma el uso correcto del dspacho dinamico y las funciones virtuales.
 
 
 
@@ -344,6 +417,13 @@ ofApp::~ofApp() {
 <img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/329379da-19a2-49f0-a183-44368eb74372" />
 
 
+
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+
+
+
 #### Evidencia 6 — Sin fugas de memoria
 
 
@@ -359,11 +439,61 @@ ofApp::~ofApp() {
 
 
 
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+
+Lo coloque en el delete  debido a que es el punto donde se libera la memoria del objeto y tambien en la otra captura en erase para que se verifique que el puntero si es eliminado 
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+En la primera captura se observa a particles apunta RisingParticle con una direccion valida lo que indica que aun existe
+
+
+En la segunda despues de que se ejecute delete y erase se ve a particles disminuye el size osea que se elimino el objeto
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+
+Aqui se demuestra que no hay fugas de memoria por que se libera el objeto mediante delete y se elimina con erase por lo que el tiempo de vida del objeto se libera sin dejar residuos 
+
+
+
+
 #### Evidencia 7 — Prueba de condición límite
 
 
 
 <img width="1918" height="1016" alt="image" src="https://github.com/user-attachments/assets/c6bb1096-4bb0-4bc3-9408-f2e59757f0d0" />
 
+
+
+
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+
+Se selecciono un escenario donde se generan 500 particulas simultaneamente cuando se presiona espacio donde se presenta un limite donde el sistema maneja una gran cantidad de objetos en la memoria simultaneamente
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+
+Se observa el vector particles que tiene el size=500 y cada uno de estos elementos es un tipo particle en este caso RisingParticle y se puede ver que cada objeto tiene sus atributos como position,velocity, color o lifetime 
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+Se puede verificar que el sistema puede manejar gran cantidad de objetos sin fallar, ademas particles crece sin ningun problema manteniedno que cada objeto tenga sus propios atributos 
 
 ## Bitácora de reflexión
