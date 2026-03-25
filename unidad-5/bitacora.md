@@ -410,6 +410,18 @@ Se demuestra el polimorfismo por que el metodo update se llama mediante el punte
 <img width="1918" height="1012" alt="Captura de pantalla 2026-03-25 002240" src="https://github.com/user-attachments/assets/5063f338-2f42-4691-8149-3dd8dfa2079e" />
 
 
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+
 
 #### Evidencia 5 — Ciclo de vida completo de tu partícula
 
