@@ -444,16 +444,14 @@ Por que los atributos definidos como protected en la clase base que es visble y 
 ##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
 
 
-Esta dentro de update de la clase SpiralExplosion ya que aqui permite observar el estado delobjeto mientras esta activo 
-
+Se pone el vector a la hora de creacion de la particula y se agrega al vector particles y se puede ver como entra al sistema 
 
 
 ##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
 
 
 
-Se observa el objeto SpiralExplosion con sus atributos internos position, velocity y color, ademas se oberva el _vptr 
-
+Se ve el vector particles y el objeto spiralExplosion recien creado y se ven sus atributos como position,velocity,color
 
 
 
@@ -461,7 +459,64 @@ Se observa el objeto SpiralExplosion con sus atributos internos position, veloci
 ##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
 
 
-Se evidencia el ciclo de vida por que se ve como se crea una particula, como evoluciona y como se elimina 
+Se evidencia el ciclo de vida del objeto viendo como se instancia dinamicamente y se almacena en el vector
+
+
+
+
+<img width="1916" height="1016" alt="Captura de pantalla 2026-03-26 155111" src="https://github.com/user-attachments/assets/4528d73a-9d5e-4e54-9974-e160d85aab43" />
+
+
+
+
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+
+Lo puse ne update dentro del ciclo que recorre particles ya que se puede ver las particulas mientras estan activas 
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+Se observa el vector particles con objetos como RisinParticle y ZigzagParticle y se pueden ver sus atributos position,velocity,age  y lifetime y el _vptr
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+
+Se demuestra la etapa donde la particula esta activa y se encuentra en ejecucion y se evidencia como cambia en cada actualizacion.
+
+
+
+<img width="1919" height="1011" alt="image" src="https://github.com/user-attachments/assets/2f34de96-113c-4d04-a07f-ec4b0c82f414" />
+
+
+
+##### Elección del punto de inspección: ¿En qué parte del código detuviste la ejecución y por qué elegiste ese punto? La elección del breakpoint es parte del pensamiento crítico y se evalúa.
+
+
+Lo puse en delete particles por que se puede ver como la particula es eliminada 
+
+
+
+##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+Se ve el vector particles con muchos objetos antes de ser eliminado y se ve que se va a ser borrado con delete lo que implica la liberacion de memoria 
+
+
+
+
+##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
+
+
+Aqui se demuestra el proceso final de vida del objeto y se ve como el objeto va a ser borrado completando su ciclo de vida 
+
+
 
 #### Evidencia 6 — Sin fugas de memoria
 
