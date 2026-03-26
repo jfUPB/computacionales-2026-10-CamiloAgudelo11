@@ -305,6 +305,10 @@ ofApp::~ofApp() {
 ```
 
 
+
+Agregue 2 tipos de particulas ZigZagParticle y SpiralParticle, ademas añadi la SpiralExplosion.
+
+
 ### Fase 2
 
 
