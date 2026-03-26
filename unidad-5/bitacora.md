@@ -414,12 +414,23 @@ Se demuestra el polimorfismo por que el metodo update se llama mediante el punte
 
 
 
+Lo coloque en update(float dt) de la clase SpiralExplosion por que se puede ver como la subclase entra a los atributos heradados de la clase base que es ExplosionParticle.
+
+
+
 ##### Explicación: ¿Qué variables, valores o estructuras se están observando en la imagen?
+
+
+
+Se puede ver el objeto actual que es SpiralExplosion y eb el depurador se ven los atributos herados desde ExplosionParticle como position, velocity, color, lifetime y size
 
 
 
 ##### Justificación: ¿Cómo demuestra esta captura comprensión del concepto o patrón solicitado?
 
+
+
+Por que los atributos definidos como protected en la clase base que es visble y puede entrar desde la subclase, mientras que los private no pueden acceder directamente, y se ve en el depurador donde solo se ven lso atributos permitidos
 
 
 
