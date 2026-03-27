@@ -532,8 +532,7 @@ Aqui se demuestra el proceso final de vida del objeto y se ve como el objeto va 
 
 
 
-<img width="1919" height="1015" alt="Captura de pantalla 2026-03-25 004947" src="https://github.com/user-attachments/assets/4f8ac17c-3d46-4333-a5db-a168689e2dd4" />
-
+<img width="1108" height="602" alt="image" src="https://github.com/user-attachments/assets/4d26bab7-bad3-430a-bfce-9cdb999df2ba" />
 
 
 
