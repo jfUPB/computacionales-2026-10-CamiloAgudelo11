@@ -593,4 +593,33 @@ Se observa el vector particles que tiene el size=500 y cada uno de estos element
 
 Se puede verificar que el sistema puede manejar gran cantidad de objetos sin fallar, ademas particles crece sin ningun problema manteniedno que cada objeto tenga sus propios atributos 
 
+
 ## Bitácora de reflexión
+
+
+
+### Jerarquía de clases del caso de estudio con tus extensiones: muestra el diagrama de clases completo, incluyendo los dos nuevos tipos de partícula que agregaste. Indica qué hereda de qué y qué métodos virtuales hay en cada nivel.
+
+
+
+<img width="1253" height="469" alt="image" src="https://github.com/user-attachments/assets/c769889c-0804-4139-869b-96eb0a2a9e3a" />
+
+
+
+
+
+### Objeto en memoria con herencia y vtable: dibuja cómo se ve en memoria un objeto de uno de tus nuevos tipos. Muestra los campos de cada clase de la jerarquía (base y derivada) y el puntero _vtable apuntando a la tabla de funciones. Anota qué dirección apunta a qué función.
+
+
+
+<img width="1134" height="711" alt="Captura de pantalla 2026-03-27 124015" src="https://github.com/user-attachments/assets/3b24ac85-9944-45a7-bf4d-62e24c2f1831" />
+
+
+
+
+### Mecanismo de despacho dinámico (polimorfismo en runtime): dibuja el mecanismo completo: desde la llamada polimórfica (p. ej., particles[i]->update(dt)) hasta la ejecución de la función correcta, pasando por el puntero _vtable y la tabla de funciones. Muestra por qué se ejecuta una versión diferente del método dependiendo del tipo real del objeto.
+
+
+
+
+<img width="877" height="535" alt="image" src="https://github.com/user-attachments/assets/a7ba38f9-d16f-49c9-a418-8901d634b67e" />
