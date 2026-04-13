@@ -407,7 +407,8 @@ Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la 
 
 
 
-<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/e1a4f537-859b-43a4-a462-db3948ed1e41" />
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/340bb43b-21c1-47f8-b7e7-d83a161c1c27" />
+
 
 
 <img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/225e6998-db8d-4e0a-8d2c-2f70e29ffe8d" />
