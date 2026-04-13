@@ -386,7 +386,8 @@ private:
 Demuestra con el depurador que tu nuevo tipo de partícula es creado correctamente por la ParticleFactory. Muestra qué rama del condicional se ejecuta y qué valores tiene el objeto Particle* recién creado (tamaño, color, velocidad).
 
 
-<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/116f01d3-accf-4772-a3a5-d9bc7a80c966" />
+<img width="1917" height="1015" alt="image" src="https://github.com/user-attachments/assets/11a1e80b-6dd1-4c6a-b12c-d287df39a226" />
+
 
 
 ##### Eleccion
@@ -406,12 +407,10 @@ Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la 
 
 
 
-<img width="1918" height="1014" alt="image" src="https://github.com/user-attachments/assets/13c3edde-7698-482b-8dad-72c35031e724" />
+<img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/e1a4f537-859b-43a4-a462-db3948ed1e41" />
 
 
-
-<img width="1917" height="1009" alt="image" src="https://github.com/user-attachments/assets/6aa85ac5-8394-4bc9-99f1-af3879626d64" />
-
+<img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/225e6998-db8d-4e0a-8d2c-2f70e29ffe8d" />
 
 
 ##### Eleccion
