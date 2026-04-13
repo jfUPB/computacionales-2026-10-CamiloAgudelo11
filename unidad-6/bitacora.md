@@ -406,6 +406,30 @@ Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la 
 
 
 
+<img width="1918" height="1014" alt="image" src="https://github.com/user-attachments/assets/13c3edde-7698-482b-8dad-72c35031e724" />
+
+
+
+<img width="1917" height="1009" alt="image" src="https://github.com/user-attachments/assets/6aa85ac5-8394-4bc9-99f1-af3879626d64" />
+
+
+
+##### Eleccion
+
+
+
+##### Explicacion 
+
+
+
+##### Justificacion
+
+
+#### Evidencia 3 — La cadena Observer → State completa
+
+Demuestra la cadena completa cuando se activa tu nuevo estado: desde keyPressed → notify → onNotify → setState. Muestra con el depurador que el nuevo evento llega a onNotify y que el puntero state cambia a tu nuevo tipo de estado.
+
+
 
 
 
