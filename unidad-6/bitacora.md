@@ -430,7 +430,46 @@ Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la 
 Demuestra la cadena completa cuando se activa tu nuevo estado: desde keyPressed → notify → onNotify → setState. Muestra con el depurador que el nuevo evento llega a onNotify y que el puntero state cambia a tu nuevo tipo de estado.
 
 
+<img width="1919" height="1011" alt="Captura de pantalla 2026-04-13 162412" src="https://github.com/user-attachments/assets/647a40a9-9a84-4e5c-aedf-8f75feba34a6" />
 
+
+<img width="1916" height="1016" alt="image" src="https://github.com/user-attachments/assets/b112b322-1bf8-4790-8df2-7256b888f5e6" />
+
+
+
+
+##### Eleccion
+
+
+
+##### Explicacion 
+
+
+
+##### Justificacion
+
+
+
+#### Evidencia 4 — Decisión de diseño justificada
+
+Elige UNA decisión de diseño que hayas tomado al extender el código (por ejemplo: por qué tu nuevo estado hereda directamente de State y no de un estado existente; o por qué configuraste la partícula de cierta manera en la factory). Demuestra con el depurador la consecuencia concreta en memoria o comportamiento de esa decisión, y justifica por qué fue la mejor opción.
+
+
+
+<img width="1917" height="1019" alt="image" src="https://github.com/user-attachments/assets/8c95e80f-a7c9-4437-bad1-e594c48ef668" />
+
+
+
+
+##### Eleccion
+
+
+
+##### Explicacion 
+
+
+
+##### Justificacion
 
 
 ## Bitácora de reflexión
