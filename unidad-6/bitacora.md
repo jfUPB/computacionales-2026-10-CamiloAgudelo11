@@ -12,6 +12,8 @@
 #### ofApp.cpp
 
 
+
+```
 #include "ofApp.h"
 #include <algorithm>
 
@@ -259,14 +261,14 @@ void ofApp::keyPressed(int key) {
 		break;
 	}
 }
-
+```
 
 
 #### ofApp.h
 
 
 
-
+```
 #pragma once
 
 #include "ofMain.h"
@@ -369,6 +371,40 @@ public:
 private:
 	std::vector<Particle *> particles;
 };
+```
+
+
+
+### Fase 2 
+
+
+
+
+
+#### Evidencia 1 — Tu nueva partícula en la Factory
+
+Demuestra con el depurador que tu nuevo tipo de partícula es creado correctamente por la ParticleFactory. Muestra qué rama del condicional se ejecuta y qué valores tiene el objeto Particle* recién creado (tamaño, color, velocidad).
+
+
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/116f01d3-accf-4772-a3a5-d9bc7a80c966" />
+
+
+##### Eleccion
+
+
+
+##### Explicacion 
+
+
+
+##### Justificacion
+
+
+#### Evidencia 2 — Tu nuevo estado en la _vtable
+
+Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la _vtable de una partícula en tu nuevo estado y compárala con la de una partícula en NormalState. ¿Qué entradas cambian? ¿Por qué?
+
+
 
 
 
