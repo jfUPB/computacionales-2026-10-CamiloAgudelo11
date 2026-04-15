@@ -472,7 +472,9 @@ Se ve que ahora state esta el objeto ChaosState y su _vfptr cambio de direccion 
 ##### Justificacion
 
 
+
 Con este cambio se puede ver el polimorfismo de la _vtable y demuestra que state se ejecuta dependiendo de la particula en tiempo de ejecucion 
+
 
 
 #### Evidencia 3 — La cadena Observer → State completa
@@ -490,16 +492,23 @@ Demuestra la cadena completa cuando se activa tu nuevo estado: desde keyPressed 
 
 
 
+Puse el breakpoint aqui ya que es el punto del destino final de la reaccion de la particula y ver que funciones se invocaron para llegar ahi, pero viendo sus variables locales
+
 
 
 ##### Explicacion 
 
 
 
+Se observa como el newState llega a la funcion setState y en el depurador se observa el objeto ChaosState ademas de ver su _vfptr y se puede ver que las funciones de actualizacion y entrada si apuntan a los de Chaos, demostrando que Observer hace su trabajo notificando llegando a onNotify 
+
 
 
 ##### Justificacion
 
+
+
+Se demuestra como se materializa el final de la cadena de eventos conectandose con el patron State y confirma que onNotify fue exitoso ya que instancia un nuevo objeto en este caso ChaosState y pasarlo por referencia a la particula, lo que lo deja preparado para cambiar el comportamiento en el siguiente ciclo de dibujo  
 
 
 
@@ -511,12 +520,25 @@ Demuestra la cadena completa cuando se activa tu nuevo estado: desde keyPressed 
 ##### Eleccion
 
 
+Aqui se mantiene el mismo breakpoint y por la misma razon pero viendo las pilas de llamadas 
+
+
 
 ##### Explicacion 
 
 
 
+Se demuestra como se materializa el final de la cadena de eventos conectandose con el patron State y confirma que onNotify fue exitoso ya que instancia un nuevo objeto en este caso ChaosState y pasarlo por referencia a la particula, lo que lo deja preparado para cambiar el comportamiento en el siguiente ciclo de dibujo  
+
+
+
+
+
 ##### Justificacion
+
+
+
+Se demuestra la cadena de comunicacion del patrn observer y es la misma particula la que escucha el mensaje de onNotify y reacciona haciendo el cambio  
 
 
 
@@ -534,12 +556,26 @@ Elige UNA decisión de diseño que hayas tomado al extender el código (por ejem
 ##### Eleccion
 
 
+Se coloco ahi el breakpoint debido a que representa a un tipo de aduana que tiene el sistema y aqui es donde Factory recibe una cadena de texto y decide con polimorfismo como debe nacer ese nuevo objeto antes de llegar al sistema principal 
+
+
 
 ##### Explicacion 
 
 
 
+Se detuvo en el tipo comet donde en el panel de variables se confirma que en type es igual a la nueva extension del sistema, ademas se observa el nuevo objeto particle ya se instancio en la memoria y esta a punto de recibir sus atributos que lo diferencia de la star o planet 
+
+
+
+
 ##### Justificacion
+
+
+
+Esta decision de diseño de usar Factory es mejor que configurar cada particula directamente en el setup, ya que es mas facil por ejemplo cambiar algun color solo modifico esa linea de Factory y no cada lugar donde se crea esta particula permitiendo que el codigo sea mas sencillo
+
+
 
 
 ## Bitácora de reflexión
