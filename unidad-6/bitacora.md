@@ -394,11 +394,22 @@ Demuestra con el depurador que tu nuevo tipo de partícula es creado correctamen
 
 
 
+Lo coloque en el return particle por que se puede ver el estado final del objeto particula antes de que Factory lo entregue al sistema principal lo que garantiza que comet se haya aplicado en la memoria 
+
+
+
 ##### Explicacion 
+
+
+SE observa que esta detenido el flujo de ejecucion en el punto de retorno, se observa que el tipo es comet y tambien su direccion de memoria y que posee sus atributos especificos como su tamaño y su color amarillo demostrando que se ejecuta la personalizacion  
 
 
 
 ##### Justificacion
+
+
+Se demuestra la implementacion de Factory y como la clase ParticleFactory encapsula la logica de creacion permitiendo que se solicite comet sin conocer sus detalles tecnicos  
+
 
 
 #### Evidencia 2 — Tu nuevo estado en la _vtable
@@ -407,14 +418,18 @@ Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la 
 
 
 
+
 <img width="1919" height="1016" alt="image" src="https://github.com/user-attachments/assets/340bb43b-21c1-47f8-b7e7-d83a161c1c27" />
 
 
 
-<img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/225e6998-db8d-4e0a-8d2c-2f70e29ffe8d" />
 
 
 ##### Eleccion
+
+
+Se coloco aqui el particle ya que es el punto de despacho dinamico donde el programa mira la _vtable para saber que funcion ejecutar 
+
 
 
 
@@ -422,7 +437,42 @@ Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la 
 
 
 
+Se ve el puntero state que esta apuntando a un objeto tipo NormalState y se puede ver su tabla de funciones virtuales con su direccion de memoria especifica 
+
+
+
 ##### Justificacion
+
+
+Esto sirve para demostrar que cada objeto tiene su propia tabla en este caso el de NormalState
+
+
+
+
+<img width="1919" height="1003" alt="image" src="https://github.com/user-attachments/assets/225e6998-db8d-4e0a-8d2c-2f70e29ffe8d" />
+
+
+
+##### Eleccion
+
+
+
+Puse el breakpoint cuando se crea la nueva particula de mi estado y aqui es donde se crea la _vfptr y nos permite verla 
+
+
+
+##### Explicacion 
+
+
+
+Se ve que ahora state esta el objeto ChaosState y su _vfptr cambio de direccion y se pueden ver las entradas de la tabla apunta ahora a este objeto 
+
+
+
+##### Justificacion
+
+
+Con este cambio se puede ver el polimorfismo de la _vtable y demuestra que state se ejecuta dependiendo de la particula en tiempo de ejecucion 
 
 
 #### Evidencia 3 — La cadena Observer → State completa
@@ -430,7 +480,27 @@ Demuestra que tu nuevo estado tiene su propia entrada en la _vtable. Captura la 
 Demuestra la cadena completa cuando se activa tu nuevo estado: desde keyPressed → notify → onNotify → setState. Muestra con el depurador que el nuevo evento llega a onNotify y que el puntero state cambia a tu nuevo tipo de estado.
 
 
+
+
 <img width="1919" height="1011" alt="Captura de pantalla 2026-04-13 162412" src="https://github.com/user-attachments/assets/647a40a9-9a84-4e5c-aedf-8f75feba34a6" />
+
+
+
+##### Eleccion
+
+
+
+
+
+##### Explicacion 
+
+
+
+
+
+##### Justificacion
+
+
 
 
 <img width="1916" height="1016" alt="image" src="https://github.com/user-attachments/assets/b112b322-1bf8-4790-8df2-7256b888f5e6" />
