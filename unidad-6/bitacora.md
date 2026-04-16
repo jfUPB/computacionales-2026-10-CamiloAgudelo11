@@ -261,6 +261,7 @@ void ofApp::keyPressed(int key) {
 		break;
 	}
 }
+
 ```
 
 
@@ -371,6 +372,7 @@ public:
 private:
 	std::vector<Particle *> particles;
 };
+
 ```
 
 
