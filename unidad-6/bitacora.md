@@ -376,6 +376,9 @@ private:
 ```
 
 
+Se agregó un nuevo tipo de partícula llamado "comet" en la ParticleFactory, con mayor velocidad y color diferenciado. Además, se implementó un nuevo estado llamado ChaosState, que modifica el comportamiento de las partículas con movimiento irregular. 
+
+
 
 ### Fase 2 
 
@@ -581,3 +584,63 @@ Esta decision de diseño de usar Factory es mejor que configurar cada particula 
 
 
 ## Bitácora de reflexión
+
+
+
+Usando excalidraw, construye los siguientes gráficos:
+
+### Los tres patrones colaborando: dibuja el sistema completo con tus extensiones. Muestra Observer, Factory y State como capas de responsabilidad separadas y las flechas de comunicación entre ellas. ¿Qué responsabilidad tiene cada patrón? ¿Dónde comienza y termina cada uno?
+
+
+<img width="929" height="880" alt="image" src="https://github.com/user-attachments/assets/57bf83b2-9376-42b1-8189-9204d491b3ac" />
+
+
+
+### State y la _vtable — conexión con la unidad anterior: en la unidad 5 estudiaste cómo la _vtable implementa el polimorfismo. Ahora conecta eso con el patrón State. Cuando una partícula llama a setState, ¿Cambia su _vtable? ¿Por qué sí o por qué no? Dibuja la respuesta.
+
+
+<img width="1415" height="442" alt="image" src="https://github.com/user-attachments/assets/32be7936-e4f0-44b6-8e57-07d2f92c5baa" />
+
+
+
+### ¿Por qué estos patrones?: para cada uno de los tres patrones, completa la frase:
+
+ “Usé el patrón [X] porque sin él tendría que [problema concreto] y eso causaría [consecuencia de diseño].”
+
+
+
+Use el patron Observer por que sin el tendria que recorrer manualmente todas las particulas y cambiarlas de estado directamente y eso causaria alto acoplamiento 
+
+
+
+Usé el patrón State porque sin él tendría que usar múltiples condicionales dentro de Particle para definir su comportamiento, y eso causaría código difícil de mantener y extender.
+
+
+
+Usé el patrón Factory porque sin él tendría que crear manualmente cada tipo de partícula en múltiples partes del código, y eso causaría duplicación y falta de control.
+
+
+
+Reflexiona también sobre estas preguntas (no hay respuestas incorrectas):
+
+
+
+### ¿Qué decisión de diseño de esta unidad cambiarías ahora que la entiendes mejor?
+
+
+Se podrian usar smart points para evitar errores
+
+
+
+
+### ¿En qué otro contexto, un juego, una app, un sistema que conozcas, usarías alguno de estos tres patrones?
+
+
+
+Se podria usar en videojuegos de como los enemigos reaccionan a un evento del jugador 
+
+
+
+### ¿Qué pregunta de la sustentación te costó más responder, y por qué crees que fue así?
+
+
