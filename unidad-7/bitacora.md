@@ -282,6 +282,117 @@ Demuestra con el depurador o con una evidencia técnica equivalente cómo el arr
 
 
 
+#### Evidencia 3 — Uniform y cambio visual
+
+Demuestra que un uniform modifica el resultado visual sin cambiar el VBO. Explica por qué esto es posible.
+   
+
+
+
+
+<img width="1915" height="1012" alt="image" src="https://github.com/user-attachments/assets/249dac9f-4989-4547-82ab-3a55962362db" />
+
+
+
+
+
+
+
+##### Punto de inspeccion 
+
+
+
+
+
+
+
+
+
+
+##### Explicacion 
+
+
+
+
+
+
+##### Justificacion 
+
+
+
+
+
+#### Evidencia 4 — Prueba de borde
+
+Diseña una prueba deliberada. Por ejemplo:
+
+usar un offset fuera del rango esperado,
+enviar un color extremo,
+desactivar un atributo,
+cambiar un location y observar qué se rompe.
+
+
+
+
+
+<img width="1919" height="1017" alt="image" src="https://github.com/user-attachments/assets/3f86c960-ed06-428c-bbd5-275372381dec" />
+
+
+##### Punto de inspeccion 
+
+
+
+
+
+
+
+##### Explicacion 
+
+
+
+
+
+##### Justificacion 
+
+
+
+
+#### Evidencia 5 — Responsabilidad del pipeline
+
+Elige una decisión técnica que tomaste y justifícala. Por ejemplo:
+
+por qué un dato va como uniform y no como atributo,
+por qué cierto cálculo se hace en C++ y no en GLSL,
+por qué el problema visual observado se debe a un error de estado y no a un error del arreglo de vértices.
+
+
+
+
+<img width="1919" height="1014" alt="image" src="https://github.com/user-attachments/assets/c787a9a2-0161-4b29-b0eb-686f80ac4459" />
+
+
+
+
+
+
+##### Punto de inspeccion 
+
+
+
+
+
+
+##### Explicacion 
+
+
+
+
+
+
+##### Justificacion 
+
+
+
 
 
 
