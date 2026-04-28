@@ -235,18 +235,27 @@ Demuestra que comprendes la secuencia de inicialización. Explica por qué GLFW 
 ##### Punto de inspeccion 
 
 
-
+He elegido este punto por que es el momento critico de la transicion donde la ventana ya existe, pero OpenGL aun no se ha activado cuando el programa continua de aqui sin fallas significa que el sistema operativo y la tarjeta grafica se comunicaron correctamente 
 
 
 ##### Explicacion 
 
 
+Se puede observar el mainWindow que tiene una direccion valida lo que hace que GLFW creo la ventana con exito.
 
+
+
+Se puede ver a bufferWidth y bufferHeight que tiene el valor de 400 desmostrando que ya tiene dimensiones fisicas 
 
 
 
 ##### Justificacion 
 
+
+Se demuestra dependencia jerarquica ya que GLFW su funcion es crear la ventana y el contexto y debe de ir primero ya que OpenGL no tiene una propia ventana y necesita que GLFW pida permiso para dibujar en la pantalla
+
+
+Y por otro lado GLAD que la funcion es cargar los punteros de las funciones de OpenGL y requiere del contexto para saber a que tarjeta grafica y version de drivers debe de pedir las funciones 
 
 
 
@@ -263,7 +272,7 @@ Demuestra con el depurador o con una evidencia técnica equivalente cómo el arr
 ##### Punto de inspeccion 
 
 
-
+Seleccione este punto ya que por que representa el momento donde se define la estructura de datos ya que sin esta instruccion la GPU tendria los numeros en la memoria pero no sabe como interpretar si son colores,posicion,etc.
 
 
 
@@ -271,7 +280,7 @@ Demuestra con el depurador o con una evidencia técnica equivalente cómo el arr
 
 
 
-
+Se observa el arreglo vertices con los respectivos valores de cada vertice, donde tambien se puede observar que ya estan en una direccion de memoria especifica antes de enviarse al buffer 
 
 
 
@@ -279,6 +288,11 @@ Demuestra con el depurador o con una evidencia técnica equivalente cómo el arr
 ##### Justificacion 
 
 
+
+Se demuestra el funcionamiento del Vertex Atributte Pointer ya que el primer parametro que es 0 coincide exactamente con el layout(location = 0) definido en el Vertex dodne se demuestra como se mapea los datos del CPU al codigo GLSL
+
+
+Ademas se demuestra que el arreglo de vertices no es una imagen sno una lista de numeros de el pipeline usada para ensamblar geometria 
 
 
 
@@ -302,7 +316,7 @@ Demuestra que un uniform modifica el resultado visual sin cambiar el VBO. Explic
 
 
 
-
+Elegi este punto por que es donde la CPU calcula la nueva posicion del triangulo que se basa en el mouse y la envia a la GPU. Es donde el estado del pipeline cambia al siguiente dibujo 
 
 
 
@@ -312,7 +326,7 @@ Demuestra que un uniform modifica el resultado visual sin cambiar el VBO. Explic
 ##### Explicacion 
 
 
-
+Se puede ver los valores X e Y que tienen los valores de la posicion del mouse, el offsetLocation tiene el valor de 0 lo que significa que se encontro la ubicaion de la variable dentro del sahder compilado y por ultimo colorLocation que tiene el valor de 1 lo que demuestra que uniform tiene su propia direccion 
 
 
 
@@ -320,6 +334,7 @@ Demuestra que un uniform modifica el resultado visual sin cambiar el VBO. Explic
 
 
 
+Se demuestra que los Uniforms permiten la interactividad eficiente ya que el VBO permanece intacto, el cambio visual ocurre por que el Vertex Shader recibe el offset y lo suma a cada posicion de cada vertice en milisegundos demostrando que es posible mover objetos complejos y no mover miles de muntos y solo usa una variable Uniform que se lo envia a la GPU 
 
 
 #### Evidencia 4 — Prueba de borde
@@ -342,6 +357,7 @@ cambiar un location y observar qué se rompe.
 
 
 
+Seleccione este punto modificandolo el glUniform2f para ver como reacciona el pipeline cuando el CPU envia valores que se pasan de el rango de coordenadas 
 
 
 
@@ -349,11 +365,22 @@ cambiar un location y observar qué se rompe.
 ##### Explicacion 
 
 
-
+En la ventana se puede ver que el triangulo aparece de color negro y se vuelve extremadamente sencible el mouse 
 
 
 ##### Justificacion 
 
+
+
+Lo que esperaba era que el triangulo se moviera mucho mas rapido pero que se pudiera seguir viendo 
+
+
+
+Lo que realmente paso El triangulo sale casi de inmediato y multiplicado por 10 lo que provoca que el GPU descarte a los pixeles 
+
+
+
+Y como conclusion se demuestra que hay que asegurarse que las transformaciones finales en el Vertex Shader se situen los objetos dentro del cubo o de lo contrario el hardware lo ignorara por completo 
 
 
 
@@ -379,6 +406,8 @@ por qué el problema visual observado se debe a un error de estado y no a un err
 
 
 
+Puse el punto aqui que es donde representa la culminacion de un ciclo completo del pipeline desde el calculo en la CPU, el envio a la GPU y por ultimo el intercambio de buffers 
+
 
 
 
@@ -386,13 +415,14 @@ por qué el problema visual observado se debe a un error de estado y no a un err
 
 
 
+Se puede ver las direcciones de los uniforms offsetLocation y colorLocation donde se ven constantes y validas manteniendo un estado de renderizado eficiente 
 
 
 
 ##### Justificacion 
 
 
-
+Se justifica el por que realice la normalizacion de las coordenadas del mouse en el codigo en CPU y no dentro del shader GPU solo se necesita ejecutarse una vez por frame, y al enviar el dato ya procesado mediante un uniform se garatiza que la GPU reciba una instruccion directa y final 
 
 
 
