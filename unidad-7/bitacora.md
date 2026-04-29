@@ -429,3 +429,32 @@ Se justifica el por que realice la normalizacion de las coordenadas del mouse en
 
 
 ## Bitácora de reflexión
+
+
+
+
+
+### Un diagrama del pipeline mínimo del triángulo simple: CPU → VBO/VAO → Vertex Shader → Fragment Shader → Framebuffer.
+
+
+<img width="937" height="487" alt="image" src="https://github.com/user-attachments/assets/f9f4f8a9-5847-4559-8eed-b077656beab0" />
+
+
+
+
+### Un diagrama comparando atributo vs uniform.
+
+
+
+
+<img width="855" height="413" alt="image" src="https://github.com/user-attachments/assets/67c8590c-b2b8-42e3-8401-0525c2b55d03" />
+
+
+
+
+
+
+
+
+
+
